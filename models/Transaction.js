@@ -7,9 +7,9 @@ const TransactionSchema = new mongoose.Schema({
     },
     amount: {
         type: Number,
-        required: [true, 'Pleas add an amount']
+        required: [true, 'Please add an amount']
     },
-    cateorgy: {
+    category: {
         type: String,
         required: [true, 'Please select a category']
     },
