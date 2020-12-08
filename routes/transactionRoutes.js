@@ -9,7 +9,7 @@ router
 
 router
     .route('/:id')   
-    .post(updateTransaction)
+    .put(updateTransaction)
     .delete(deleteTransaction);
 
 

@@ -23,7 +23,7 @@ exports.getTransactions = async (req, res, next) => {
 // @access Public
 exports.addTransaction = async (req, res, next) => {
   try {
-    const { text, amount, category } = req.body;
+    const { description, amount, category } = req.body;
     const transaction = await Transaction.create(req.body);
 
     return res.status(201).json({
@@ -44,11 +44,11 @@ exports.addTransaction = async (req, res, next) => {
 };
 
 // @desc Update transaction
-// @route POST /api/v1/transactions/:id
+// @route PUT /api/v1/transactions/:id
 // @access Public
 exports.updateTransaction = async (req, res, next) => {
   try {
-    const { text, amount, category } = req.body;
+    const { description, amount, category } = req.body;
     const transaction = await Transaction.findOneAndUpdate(req.params.id);
     if (!transaction.ok) {
       return res.status(400).json({
