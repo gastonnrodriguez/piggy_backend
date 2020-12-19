@@ -13,6 +13,10 @@ const TransactionSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please select a category']
     },
+    type: {
+        type: String,
+        required: [true, 'Please mark a type of transaction e > Expense or i > Income']
+    },
     createdAt:{
         type: Date,
         default: Date.now
