@@ -10,6 +10,7 @@ Crear transaccion>
 Cabezales> JSON
 HTTP> POST
 Ejemplo Body: 
+
 {
     "type": "i",
     "description": "Aguinaldo",
